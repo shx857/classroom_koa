@@ -1,0 +1,533 @@
+[2019-12-21T00:28:59.276] [ERROR] error - { method: 'POST',
+  url: '/api/users/postuser',
+  body: 
+   { user_id: '',
+     password: '',
+     name: '',
+     sex: '',
+     birthday: '',
+     position: '' },
+  costTime: undefined,
+  err: 
+   { SequelizeDatabaseError: Incorrect integer value: '' for column 'u_sex' at row 1
+    at Query.formatError (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\query.js:244:16)
+    at Execute.handler [as onResult] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\query.js:51:23)
+    at Execute.execute (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\commands\command.js:30:14)
+    at Connection.handlePacket (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:408:32)
+    at PacketParser.Connection.packetParser.p [as onPacket] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:70:12)
+    at PacketParser.executeStart (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packet_parser.js:75:16)
+    at Socket.Connection.stream.on.data (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:77:25)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+     name: 'SequelizeDatabaseError',
+     parent: 
+      { Error: Incorrect integer value: '' for column 'u_sex' at row 1
+    at Packet.asError (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packets\packet.js:708:17)
+    at Execute.execute (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\commands\command.js:28:26)
+    at Connection.handlePacket (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:408:32)
+    at PacketParser.Connection.packetParser.p [as onPacket] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:70:12)
+    at PacketParser.executeStart (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packet_parser.js:75:16)
+    at Socket.Connection.stream.on.data (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:77:25)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+        code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+        errno: 1366,
+        sqlState: 'HY000',
+        sqlMessage: 'Incorrect integer value: \'\' for column \'u_sex\' at row 1',
+        sql: 'INSERT INTO `user` (`id`,`u_id`,`u_password`,`u_name`,`u_role`,`solt`,`u_sex`,`u_birthday`,`u_position`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);',
+        parameters: [Array] },
+     original: 
+      { Error: Incorrect integer value: '' for column 'u_sex' at row 1
+    at Packet.asError (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packets\packet.js:708:17)
+    at Execute.execute (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\commands\command.js:28:26)
+    at Connection.handlePacket (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:408:32)
+    at PacketParser.Connection.packetParser.p [as onPacket] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:70:12)
+    at PacketParser.executeStart (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packet_parser.js:75:16)
+    at Socket.Connection.stream.on.data (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:77:25)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+        code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+        errno: 1366,
+        sqlState: 'HY000',
+        sqlMessage: 'Incorrect integer value: \'\' for column \'u_sex\' at row 1',
+        sql: 'INSERT INTO `user` (`id`,`u_id`,`u_password`,`u_name`,`u_role`,`solt`,`u_sex`,`u_birthday`,`u_position`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);',
+        parameters: [Array] },
+     sql: 'INSERT INTO `user` (`id`,`u_id`,`u_password`,`u_name`,`u_role`,`solt`,`u_sex`,`u_birthday`,`u_position`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);',
+     parameters: 
+      [ '',
+        '80c5941086a9da57e6ed00109ce004af',
+        '',
+        1,
+        '9f2b10b9-ab1c-437a-aa35-bc4fc7139e2f',
+        '',
+        'Invalid date',
+        '' ] } }
+[2019-12-21T11:40:58.495] [ERROR] error - { method: 'GET',
+  url: '/api/tables/tableinfo?0=123',
+  body: {},
+  costTime: undefined,
+  err: TypeError: Cannot read property 't_endTime' of null
+    at tableinfo (D:\360极速浏览器下载\koaLogin_sequelize\controllers\client\table.js:87:36)
+    at <anonymous> }
+[2019-12-21T21:29:28.697] [ERROR] error - { method: 'POST',
+  url: '/api/classrooms/postclassroom',
+  body: 
+   { c_id: '123',
+     c_name: '123',
+     c_person: '123',
+     c_media: '0',
+     c_position: '123' },
+  costTime: undefined,
+  err: 
+   { SequelizeDatabaseError: Field 'c_use' doesn't have a default value
+    at Query.formatError (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\query.js:244:16)
+    at Execute.handler [as onResult] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\query.js:51:23)
+    at Execute.execute (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\commands\command.js:30:14)
+    at Connection.handlePacket (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:408:32)
+    at PacketParser.Connection.packetParser.p [as onPacket] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:70:12)
+    at PacketParser.executeStart (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packet_parser.js:75:16)
+    at Socket.Connection.stream.on.data (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:77:25)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+     name: 'SequelizeDatabaseError',
+     parent: 
+      { Error: Field 'c_use' doesn't have a default value
+    at Packet.asError (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packets\packet.js:708:17)
+    at Execute.execute (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\commands\command.js:28:26)
+    at Connection.handlePacket (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:408:32)
+    at PacketParser.Connection.packetParser.p [as onPacket] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:70:12)
+    at PacketParser.executeStart (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packet_parser.js:75:16)
+    at Socket.Connection.stream.on.data (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:77:25)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+        code: 'ER_NO_DEFAULT_FOR_FIELD',
+        errno: 1364,
+        sqlState: 'HY000',
+        sqlMessage: 'Field \'c_use\' doesn\'t have a default value',
+        sql: 'INSERT INTO `classroom` (`c_id`,`c_name`,`c_person`,`c_position`,`c_media`) VALUES (?,?,?,?,?);',
+        parameters: [Array] },
+     original: 
+      { Error: Field 'c_use' doesn't have a default value
+    at Packet.asError (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packets\packet.js:708:17)
+    at Execute.execute (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\commands\command.js:28:26)
+    at Connection.handlePacket (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:408:32)
+    at PacketParser.Connection.packetParser.p [as onPacket] (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:70:12)
+    at PacketParser.executeStart (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\packet_parser.js:75:16)
+    at Socket.Connection.stream.on.data (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\mysql2\lib\connection.js:77:25)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+        code: 'ER_NO_DEFAULT_FOR_FIELD',
+        errno: 1364,
+        sqlState: 'HY000',
+        sqlMessage: 'Field \'c_use\' doesn\'t have a default value',
+        sql: 'INSERT INTO `classroom` (`c_id`,`c_name`,`c_person`,`c_position`,`c_media`) VALUES (?,?,?,?,?);',
+        parameters: [Array] },
+     sql: 'INSERT INTO `classroom` (`c_id`,`c_name`,`c_person`,`c_position`,`c_media`) VALUES (?,?,?,?,?);',
+     parameters: [ '123', '123', '123', '123', '0' ] } }
+[2019-12-22T00:04:20.318] [ERROR] error - { method: 'GET',
+  url: '/api/tables/tableinfo?0=1001',
+  body: {},
+  costTime: undefined,
+  err: TypeError: Cannot read property 't_endTime' of null
+    at tableinfo (D:\360极速浏览器下载\koaLogin_sequelize\controllers\client\table.js:87:36)
+    at <anonymous> }
+[2019-12-22T00:05:06.831] [ERROR] error - { method: 'GET',
+  url: '/api/tables/tableinfo?0=1001',
+  body: {},
+  costTime: undefined,
+  err: TypeError: Cannot read property 't_endTime' of null
+    at tableinfo (D:\360极速浏览器下载\koaLogin_sequelize\controllers\client\table.js:87:36)
+    at <anonymous> }
+[2019-12-22T10:25:21.392] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1002', password: '1234' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T10:25:36.499] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1002', password: '1234' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T10:25:46.203] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1002', password: '1234' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T10:26:36.725] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1002', password: '1234' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T10:26:46.554] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1002', password: '1234' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T10:28:44.574] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1002', password: '1234' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T10:29:56.492] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1002', password: '1234' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T10:30:02.856] [ERROR] error - { method: 'POST',
+  url: '/api/users/postlogin',
+  body: { user_id: '1001', password: '123' },
+  costTime: undefined,
+  err: 
+   { SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at Promise.tap.then.catch.err (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:123:19)
+    at tryCatcher (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (D:\360极速浏览器下载\koaLogin_sequelize\node_modules\bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+     name: 'SequelizeConnectionRefusedError',
+     parent: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true },
+     original: 
+      { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+        code: 'ECONNREFUSED',
+        errno: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 3306,
+        fatal: true } } }
+[2019-12-22T11:52:04.939] [ERROR] error - { method: 'POST',
+  url: '/api/tables/postclass/5',
+  body: 
+   { user_id: '1002',
+     class_id: 'U103',
+     result: '申请成功',
+     table_id: '5' },
+  costTime: undefined,
+  err: TypeError: Cannot read property 'c_name' of null
+    at postclass (D:\360极速浏览器下载\koaLogin_sequelize\controllers\client\table.js:181:112)
+    at <anonymous> }
+[2019-12-22T15:15:57.650] [ERROR] error - { method: 'POST',
+  url: '/api/tables/postclass/6',
+  body: 
+   { user_id: '1002',
+     class_id: '104',
+     result: '申请成功',
+     table_id: '6' },
+  costTime: undefined,
+  err: TypeError: Cannot read property 'c_name' of null
+    at postclass (D:\360极速浏览器下载\koaLogin_sequelize\controllers\client\table.js:181:112)
+    at <anonymous> }
+[2019-12-22T16:57:40.652] [ERROR] error - { method: 'POST',
+  url: '/api/tables/postclass/3',
+  body: 
+   { user_id: '1002',
+     class_id: '102',
+     result: '申请成功',
+     table_id: '3' },
+  costTime: undefined,
+  err: TypeError: Cannot read property 'c_name' of null
+    at postclass (D:\360极速浏览器下载\koaLogin_sequelize\controllers\client\table.js:182:113)
+    at <anonymous> }
